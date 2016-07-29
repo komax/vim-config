@@ -10,6 +10,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Add NerdTree
 Plugin 'scrooloose/nerdtree'
+" Add solarized scheme
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,6 +69,9 @@ let g:Tex_PromptedCommands='vec,footnote,label,caption,vref,eqref,ref,pageref'
 set grepprg=grep\ -nH\ $*
 set iskeyword+=:
 set winaltkeys=no
+
+" NERD Tree
+map <leader>n :NERDTreeToggle<CR>
 
 " Python config for PEP 7 & 8
 "source /home/max/.vim/vimrc.python
