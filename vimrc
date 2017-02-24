@@ -51,10 +51,19 @@ set nocompatible
 filetype plugin on
 filetype indent on
 syntax enable
+
+" Settings for the solarized colorscheme
+"colorscheme solarized
+"set background=light
+" set background=dark
+"set t_Co=16
+"let g:solarized_termcolors=256
+" Nice default colorschemes
+"colorscheme slate " Used slate for couple of years: blue and orange
+"colorscheme torte " Polished blueish colorscheme
+set t_Co=256
 colorscheme zenburn 
-set background=light
-set t_Co=16
-let g:solarized_termcolors=256
+
 set number
 set hlsearch
 set tabstop=4
