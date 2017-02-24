@@ -12,6 +12,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 " Add solarized scheme
 Plugin 'altercation/vim-colors-solarized'
+" Add Zenburn color scheme
+Plugin 'jnurmine/Zenburn'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,8 +51,8 @@ set nocompatible
 filetype plugin on
 filetype indent on
 syntax enable
-colorscheme solarized
-set background=dark
+colorscheme zenburn 
+set background=light
 set t_Co=16
 let g:solarized_termcolors=256
 set number
