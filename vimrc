@@ -14,6 +14,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 " Add Zenburn color scheme
 Plugin 'jnurmine/Zenburn'
+" Add Railscasts color scheme
+Plugin 'jpo/vim-railscasts-theme'
 
 
 " All of your Plugins must be added before the following line
@@ -54,15 +56,14 @@ syntax enable
 
 " Settings for the solarized colorscheme
 "colorscheme solarized
-set background=light
-" set background=dark
+"set background=light
+"set background=dark
 "set t_Co=16
 "let g:solarized_termcolors=256
 " Nice default colorschemes
-"colorscheme slate " Used slate for couple of years: blue and orange
+colorscheme slate " Used slate for couple of years: blue and orange
 "colorscheme torte " Polished blueish colorscheme
 set t_Co=256
-colorscheme zenburn 
 
 set number
 set hlsearch
