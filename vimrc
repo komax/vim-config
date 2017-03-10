@@ -63,6 +63,9 @@ syntax enable
 "colorscheme torte " Polished blueish colorscheme
 set t_Co=256
 colorscheme zenburn 
+"hi Normal guibg=NONE ctermbg=NONE
+
+set term=screen-256color
 
 set number
 set hlsearch
