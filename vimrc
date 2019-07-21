@@ -13,9 +13,11 @@ Plugin 'scrooloose/nerdtree'
 " Add solarized scheme
 Plugin 'altercation/vim-colors-solarized'
 " Add Zenburn color scheme
-Plugin 'jnurmine/Zenburn'
+"Plugin 'jnurmine/Zenburn'
 " Add Railscasts color scheme
 Plugin 'jpo/vim-railscasts-theme'
+" Add base16-vim colors
+Plugin 'chriskempson/base16-vim'
 
 
 " All of your Plugins must be added before the following line
@@ -63,8 +65,9 @@ syntax enable
 " Nice default colorschemes
 "colorscheme slate " Used slate for couple of years: blue and orange
 "colorscheme torte " Polished blueish colorscheme
+let base16colorspace=256
 set t_Co=256
-colorscheme zenburn 
+colorscheme base16-twilight 
 set term=screen-256color
 "hi Normal guibg=NONE ctermbg=NONE
 
@@ -77,7 +80,7 @@ set autoindent
 set expandtab " expand tabs with 4 blanks
 set foldmethod=indent
 set foldlevel=4
-set textwidth=79
+"set textwidth=79
 
 " Settings for LaTeX-Suite
 let g:Tex_HotKeyMappings='itemize,enumerate,gather*,align*'
@@ -86,6 +89,7 @@ let g:Tex_PromptedCommands='vec,footnote,label,caption,vref,eqref,ref,pageref'
 set grepprg=grep\ -nH\ $*
 set iskeyword+=:
 set winaltkeys=no
+let g:tex_flavor='latex'
 
 " NERD Tree
 map <leader>n :NERDTreeToggle<CR>
@@ -104,4 +108,10 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 imap <S-CR>    <CR><CR>end<Esc>-cc
 
 " Set up spell checking for LaTeX
-autocmd FileType tex setlocal spell spelllang=en_us
+"autocmd FileType tex setlocal spell spelllang=en_us
+" Spellchecking for for markdown
+autocmd FileType md setlocal spell spelllang=en_us
+
+" Syntax highlihting for Snakemake
+au BufNewFile,BufRead Snakefile set syntax=snakemake
+au BufNewFile,BufRead *.snake set syntax=snakemake
